@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Moon Jeong Kim Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-3">Moon Jeong Kim</h1>
+        <p class="fs-3 opacity-75 mb-4">Master of Science in Information Systems Candidate</p>
+        <p class="col-md-8 mx-auto lead mb-5">
+            Specialized in Business Analytics with a strong foundation in problem solving and data-driven insights. Enthusiastically seeking the position of Data Analyst.
+        </p>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            <a href="{% url 'projects' %}" class="btn btn-primary btn-lg px-4 gap-3">View Projects</a>
+            <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg px-4">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<div class="container mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <h2 class="fw-bold mb-4" style="color: var(--navy-primary)">Career Profile</h2>
+            <p class="lead">Highly motivated MSIS candidate with excellent analytical and interpretive skills. Proven ability to work independently and in team environments to meet company needs.</p>
+            <p>Skilled in data analysis with a strong work ethic, exceptional attention to detail, and excellent time management.</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="p-3 border rounded bg-white shadow-sm h-100">
+                        <h5 class="fw-bold mb-1 text-primary">Data Analysis</h5>
+                        <small class="text-muted">Expertise in Python, SQL, and RStudio Code for data-driven decision making.</small>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border rounded bg-white shadow-sm h-100">
+                        <h5 class="fw-bold mb-1 text-primary">Business Analytics</h5>
+                        <small class="text-muted">Currently pursuing MSIS at Baylor University with a 4.0 GPA.</small>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border rounded bg-white shadow-sm h-100">
+                        <h5 class="fw-bold mb-1 text-primary">AI & Tools</h5>
+                        <small class="text-muted">Proficient in ChatGPT, Gemini Pro, Claude, and Tableau.</small>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border rounded bg-white shadow-sm h-100">
+                        <h5 class="fw-bold mb-1 text-primary">Global Mindset</h5>
+                        <small class="text-muted">Fluent in English and Native Korean speaker with international experience.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
