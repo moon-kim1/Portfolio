@@ -6,7 +6,10 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+# Media and Personal
 media/
+*.pdf
+Moon Kim Resume_04 2026.pdf
 staticfiles/
 
 # Environments
