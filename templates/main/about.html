@@ -1,118 +1,125 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}About - Moon Jeong Kim{% endblock %}
+{% block title %}About | Moon Jeong Kim{% endblock %}
 
 {% block content %}
 <div class="container py-5">
     <div class="row g-5">
         <div class="col-md-4 text-center">
-            <div class="position-sticky" style="top: 100px;">
-                <img src="https://via.placeholder.com/300" class="img-fluid rounded-circle mb-4 shadow" alt="Moon Jeong Kim">
-                <h2 class="fw-bold" style="color: var(--navy-primary)">Moon Jeong Kim</h2>
-                <p class="text-muted fs-5">MSIS Candidate @ Baylor</p>
-                <div class="d-flex justify-content-center gap-3 mt-3">
-                    <a href="https://www.linkedin.com/in/moon-jeong-kim/" class="text-primary" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            <div class="position-sticky" style="top: 120px;">
+                <img src="https://via.placeholder.com/300" class="img-fluid mb-4 shadow-sm" alt="Moon Jeong Kim"
+                    style="border: 1px solid var(--gold); padding: 10px; background: white;">
+                <h2 class="fw-bold mb-1">Moon Jeong Kim</h2>
+                <p class="text-muted text-uppercase small letter-spacing-2">MSIS Candidate @ Baylor</p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="https://www.linkedin.com/in/moon-jeong-kim/" class="accent-gold" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                         </svg>
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-md-8">
-            <h1 class="display-5 fw-bold mb-4" style="color: var(--navy-primary)">About Me</h1>
-            <p class="lead text-secondary mb-5">
-                I am a highly motivated Master of Science in Information Systems candidate at Baylor University, specializing in Business Analytics. With a Ph.D. in City and Regional Planning and a background in Architecture, I bring a unique multidisciplinary perspective to data analysis and problem-solving.
+            <h2 class="section-title">Professional Profile</h2>
+            <p class="lead mb-5" style="color: var(--navy-surface);">
+                Highly motivated MSIS candidate at Baylor University with extensive academic background in data
+                analytics and research. I specialize in Business Analytics, turning complex multi-layered data into
+                strategic insights.
             </p>
-            
+
             <div class="mb-5">
-                <h3 class="fw-bold mb-4 border-bottom pb-2">Education</h3>
-                <div class="mb-4">
+                <h3 class="fw-bold mb-4 text-uppercase small letter-spacing-2" style="color: var(--gold);">Academic
+                    Credentials</h3>
+                <div class="edu-item">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
                             <h5 class="fw-bold mb-1">Master of Science in Information Systems</h5>
-                            <p class="text-primary mb-0">Baylor University – Waco, Texas</p>
-                            <p class="small mb-0">Concentration in Business Analytics: GPA 4.0</p>
+                            <p class="text-muted mb-0">Baylor University – Waco, Texas</p>
+                            <p class="small text-navy-surface mb-0">Concentration in Business Analytics: GPA 4.0</p>
                         </div>
-                        <small class="text-muted fw-bold">Dec 2026</small>
+                        <span class="badge">DEC 2026</span>
                     </div>
                 </div>
-                <div class="mb-4">
+                <div class="edu-item">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
-                            <h5 class="fw-bold mb-1">Ph.D. of City and Regional Planning</h5>
-                            <p class="text-primary mb-0">The Ohio State University – Columbus, Ohio</p>
-                            <p class="small mb-0">Specialized in Housing</p>
+                            <h5 class="fw-bold mb-1">Master of City and Regional Planning</h5>
+                            <p class="text-muted mb-0">The Ohio State University – Columbus, Ohio</p>
+                            <p class="small text-navy-surface mb-0">Specialized in Housing Research</p>
                         </div>
-                        <small class="text-muted fw-bold">June 2010</small>
+                        <span class="badge">JUNE 2008</span>
                     </div>
                 </div>
-                <div class="mb-4">
+                <div class="edu-item">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
                             <h5 class="fw-bold mb-1">Bachelor of Engineering in Architecture</h5>
-                            <p class="text-primary mb-0">Jeonbuk National University – Jeonju City, South Korea</p>
+                            <p class="text-muted mb-0">Jeonbuk National University – South Korea</p>
                         </div>
-                        <small class="text-muted fw-bold">Feb 1997</small>
+                        <span class="badge">FEB 1997</span>
                     </div>
                 </div>
             </div>
 
             <div class="mb-5">
-                <h3 class="fw-bold mb-4 border-bottom pb-2">Technical Skills</h3>
+                <h3 class="fw-bold mb-4 text-uppercase small letter-spacing-2" style="color: var(--gold);">Technical
+                    Expertise</h3>
                 <div class="row g-4">
                     <div class="col-md-6">
-                        <h6 class="fw-bold text-navy">Programming & Data</h6>
-                        <div class="d-flex flex-wrap gap-2 mb-3">
-                            <span class="badge">Python</span>
-                            <span class="badge">SQL</span>
-                            <span class="badge">RStudio Code</span>
-                            <span class="badge">SAS</span>
-                            <span class="badge">ArcGIS</span>
+                        <div class="card p-4">
+                            <h6 class="fw-bold mb-3">Programming & Data</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge">Python</span>
+                                <span class="badge">SQL</span>
+                                <span class="badge">RStudio</span>
+                                <span class="badge">SAS</span>
+                                <span class="badge">ArcGIS</span>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h6 class="fw-bold text-navy">AI & Visualization</h6>
-                        <div class="d-flex flex-wrap gap-2 mb-3">
-                            <span class="badge">ChatGPT</span>
-                            <span class="badge">Gemini Pro</span>
-                            <span class="badge">Claude</span>
-                            <span class="badge">Tableau</span>
+                        <div class="card p-4">
+                            <h6 class="fw-bold mb-3">AI & Visualization</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge">Claude</span>
+                                <span class="badge">Gemini Pro</span>
+                                <span class="badge">GPT-4</span>
+                                <span class="badge">Tableau</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="mb-5">
-                <h3 class="fw-bold mb-4 border-bottom pb-2">Recent Experience</h3>
-                <div class="mb-4">
+                <h3 class="fw-bold mb-4 text-uppercase small letter-spacing-2" style="color: var(--gold);">Experience
+                </h3>
+                <div class="exp-item">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
                             <h5 class="fw-bold mb-1">Tax Specialist</h5>
-                            <p class="text-primary mb-1">Total Tax Certificates – Waco, TX</p>
-                            <ul class="small">
-                                <li>Prepares 300+ tax certificates per month utilizing Appraisal District and Tax Office data.</li>
-                                <li>Validated 600+ certificates per month to ensure accuracy and quality.</li>
+                            <p class="text-muted mb-3">Total Tax Certificates – Waco, TX</p>
+                            <ul class="small text-navy-surface">
+                                <li class="mb-2">Managed large-scale data validation for 600+ certificates monthly.</li>
+                                <li class="mb-2">Utilized appraisal district and tax office data to ensure high
+                                    precision in reporting.</li>
                             </ul>
                         </div>
-                        <small class="text-muted fw-bold">May 2025 - Present</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-5">
-                <h3 class="fw-bold mb-4 border-bottom pb-2">Languages</h3>
-                <div class="d-flex gap-4">
-                    <div>
-                        <span class="fw-bold">English:</span> <span class="text-muted">Fluent</span>
-                    </div>
-                    <div>
-                        <span class="fw-bold">Korean:</span> <span class="text-muted">Native</span>
+                        <span class="badge">2025 - PRES</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    .letter-spacing-2 {
+        letter-spacing: 2px;
+    }
+</style>
 {% endblock %}
