@@ -1,34 +1,103 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Contact - MSIS Portfolio{% endblock %}
+{% block title %}Contact | Moon Jeong Kim{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card shadow-sm">
-            <div class="card-header bg-dark text-white text-center">
-                <h3 class="mb-0">Contact Me</h3>
+<section class="page-header">
+    <div class="container">
+        <span class="breadcrumb-text">Collaboration</span>
+        <h1 class="display-4 fw-bold">Get In Touch</h1>
+        <p class="lead opacity-75">Have a question or want to work together? I'd love to hear from you.</p>
+    </div>
+</section>
+
+<div class="container pb-5 mb-5">
+    <div class="row g-5">
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+            <h2 class="section-title">Contact Information</h2>
+            <div class="card-modern border-gold-left mb-4">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="bg-light p-3 rounded-circle me-3">
+                        <i class="fas fa-envelope text-gold"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-0">Email</h6>
+                        <a href="mailto:moon_kim1@baylor.edu" class="text-muted text-decoration-none small">moon_kim1@baylor.edu</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                    <div class="bg-light p-3 rounded-circle me-3">
+                        <i class="fab fa-linkedin-in text-gold"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-0">LinkedIn</h6>
+                        <a href="https://www.linkedin.com/in/moon-jeong-kim/" target="_blank" class="text-muted text-decoration-none small">Moon Jeong Kim</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="bg-light p-3 rounded-circle me-3">
+                        <i class="fas fa-map-marker-alt text-gold"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-0">Location</h6>
+                        <p class="text-muted small mb-0">Waco, Texas</p>
+                    </div>
+                </div>
             </div>
-            <div class="card-body p-4">
-                <p class="text-muted text-center mb-4">Have a question or want to work together? Send me a message!</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+            <h2 class="section-title">Send a Message</h2>
+            <div class="card-modern shadow-lg">
                 <form method="POST">
                     {% csrf_token %}
-                    {% for field in form %}
-                    <div class="mb-3">
-                        <label class="form-label">{{ field.label }}</label>
-                        {{ field }}
-                        {% if field.errors %}
-                        <div class="text-danger small">{{ field.errors }}</div>
-                        {% endif %}
+                    <div class="row">
+                        {% for field in form %}
+                        <div class="{% if field.name == 'message' %}col-12{% else %}col-md-6{% endif %} mb-4">
+                            <label class="form-label fw-bold small text-uppercase letter-spacing-2" style="color: var(--navy-surface);">
+                                {{ field.label }}
+                            </label>
+                            {{ field }}
+                            {% if field.errors %}
+                            <div class="text-danger small mt-1">{{ field.errors }}</div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="text-end mt-2">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                            SEND MESSAGE <i class="fas fa-paper-plane ms-2 small"></i>
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+    .form-control {
+        padding: 0.8rem 1.2rem;
+        border: 1px solid #e0e6ed;
+        border-radius: 4px;
+        background-color: #fcfdfe;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 0.25rem rgba(201, 168, 76, 0.1);
+        background-color: #fff;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa !important;
+    }
+</style>
 {% endblock %}

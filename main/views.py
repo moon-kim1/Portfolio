@@ -2,21 +2,23 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Project
+from .models import Project, UserProfile
 from .forms import ContactForm
 
 def home(request):
     return render(request, 'main/home.html')
 
 def about(request):
-    return render(request, 'main/about.html')
+    profile = UserProfile.objects.first()
+    return render(request, 'main/about.html', {'profile': profile})
 
 def projects(request):
-    projects = Project.objects.all().order_by('-date_added')
+    projects = Project.objects.all().order_by('order', '-date_added')
     return render(request, 'main/projects.html', {'projects': projects})
 
 def resume(request):
-    return render(request, 'main/resume.html')
+    profile = UserProfile.objects.first()
+    return render(request, 'main/resume.html', {'profile': profile})
 
 def contact(request):
     if request.method == 'POST':

@@ -1,35 +1,75 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Projects - MSIS Portfolio{% endblock %}
+{% block title %}Projects | Moon Jeong Kim{% endblock %}
 
 {% block content %}
-<h2 class="mb-4">My Projects</h2>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for project in projects %}
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            {% if project.image %}
-            <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
-            {% else %}
-            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Placeholder">
-            {% endif %}
-            <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text text-muted small">{{ project.tech_stack }}</p>
-                <p class="card-text">{{ project.description|truncatewords:20 }}</p>
-            </div>
-            <div class="card-footer bg-white border-top-0 pb-3">
-                {% if project.github_url %}
-                <a href="{{ project.github_url }}" class="btn btn-outline-dark btn-sm" target="_blank">View on GitHub</a>
-                {% endif %}
+<section class="page-header">
+    <div class="container">
+        <span class="breadcrumb-text">Portfolio</span>
+        <h1 class="display-4 fw-bold">My Projects</h1>
+        <p class="lead opacity-75">A showcase of analytical research and systems development.</p>
+    </div>
+</section>
+
+<div class="container pb-5 mb-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for project in projects %}
+        <div class="col">
+            <article class="modern-project-card">
+                <div class="project-img-wrapper">
+                    {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                    {% else %}
+                    <div class="bg-navy-gradient w-100 h-100 d-flex align-items-center justify-content-center">
+                        <span class="text-white h2">{{ project.title|slice:":2"|upper }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="project-card-body">
+                    <h3 class="project-card-title">{{ project.title }}</h3>
+                    <p class="project-card-text text-muted">{{ project.description|truncatewords:20 }}</p>
+                    
+                    <div class="project-tech-pills">
+                        {% for tech in project.tech_list %}
+                        <span class="tech-pill-small">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="project-card-footer">
+                    {% if project.github_url %}
+                    <a href="{{ project.github_url }}" class="btn-modern btn-modern-dark" target="_blank">
+                        GitHub
+                    </a>
+                    {% endif %}
+                    
+                    {% if project.presentation_file %}
+                        {% if project.is_ppt %}
+                        <a href="https://view.officeapps.live.com/op/view.aspx?src={{ request.scheme }}://{{ request.get_host }}{{ project.presentation_file.url }}" class="btn-modern btn-modern-outline" target="_blank">
+                            PPT View
+                        </a>
+                        {% elif project.is_pdf %}
+                        <a href="{{ project.presentation_file.url }}" class="btn-modern btn-modern-outline" target="_blank">
+                            PDF View
+                        </a>
+                        {% else %}
+                        <a href="{{ project.presentation_file.url }}" class="btn-modern btn-modern-outline" target="_blank">
+                            File View
+                        </a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </article>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center py-5">
+            <div class="card-modern">
+                <p class="text-muted mb-0">No projects added yet. Please check back later!</p>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% empty %}
-    <div class="col-12">
-        <p class="text-center">No projects added yet. Please check back later!</p>
-    </div>
-    {% endfor %}
 </div>
 {% endblock %}

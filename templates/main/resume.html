@@ -1,270 +1,116 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Resume - Moon Jeong Kim{% endblock %}
+{% block title %}Resume | Moon Jeong Kim{% endblock %}
 
 {% block content %}
-<div class="container py-5">
-    <div class="row mb-5">
-        <div class="col-lg-10 mx-auto">
-            <h1 class="display-5 fw-bold mb-2" style="color: var(--navy-primary)">Moon Jeong Kim</h1>
-            <p class="text-muted fs-5 mb-3">
-                <a href="mailto:moon_kim1@baylor.edu">moon_kim1@baylor.edu</a> |
-                <a href="https://www.linkedin.com/in/moon-jeong-kim/" target="_blank">LinkedIn</a>
-            </p>
-        </div>
+<section class="page-header">
+    <div class="container">
+        <span class="breadcrumb-text">Professional Record</span>
+        <h1 class="display-4 fw-bold">Curriculum Vitae</h1>
+        <p class="lead opacity-75">Moon Jeong Kim | Master of Science in Information Systems</p>
     </div>
+</section>
 
-    <!-- Career Profile Section -->
-    <div class="row mb-5">
-        <div class="col-lg-10 mx-auto">
-            <div class="card shadow-sm mb-4" style="border-left: 5px solid var(--navy-primary);">
-                <div class="card-body">
-                    <h2 class="card-title fw-bold mb-3" style="color: var(--navy-primary)">Career Profile</h2>
-                    <p class="card-text">Highly motivated MSIS candidate specialized in business analytics, with
-                        excellent analytical and interpretive skills and a strong foundation in problem solving and
-                        independent research. Skilled in data analysis, with a strong work ethic, exceptional attention
-                        to detail, and excellent time management. Proven ability to work independently and/or in a team
-                        environment, as well as effective interpersonal skills. Highly motivated and eager to expand my
-                        skill set to meet the needs of the company. Enthusiastically seeking the position of Data
-                        Analyst.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Education Section -->
-    <div class="row mb-5">
-        <div class="col-lg-10 mx-auto">
-            <h2 class="fw-bold mb-4" style="color: var(--navy-primary);">Education</h2>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Master of Science in Information Systems</h5>
-                        <p class="text-muted mb-0"><strong>BAYLOR UNIVERSITY</strong> – Waco, Texas</p>
-                    </div>
-                    <span class="badge bg-secondary">December 2026</span>
-                </div>
-                <ul class="list-unstyled ms-3">
-                    <li>• Concentration in Business Analytics: GPA 4.0</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Master of City and Regional Planning</h5>
-                        <p class="text-muted mb-0"><strong>THE OHIO STATE UNIVERSITY</strong> – Columbus, Ohio</p>
-                    </div>
-                    <span class="badge bg-secondary">June 2008</span>
-                </div>
-                <ul class="list-unstyled ms-3">
-                    <li>• Specialized in Housing</li>
-                    <li>• Thesis Title: Residential Location Decisions: Heterogeneity and the Trade-off between Location
-                        and Housing Quality</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Bachelor of Engineering in Architecture</h5>
-                        <p class="text-muted mb-0"><strong>JEONBUK NATIONAL UNIVERSITY</strong> – Jeonju City, South
-                            Korea</p>
-                    </div>
-                    <span class="badge bg-secondary">February 1997</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Experience Section -->
-    <div class="row mb-5">
-        <div class="col-lg-10 mx-auto">
-            <h2 class="fw-bold mb-4" style="color: var(--navy-primary);">Experience</h2>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Tax Specialist</h5>
-                        <p class="text-muted mb-0"><strong>Total Tax Certificates</strong> – Waco, TX</p>
-                    </div>
-                    <span class="badge bg-secondary">May 2025 – Current</span>
-                </div>
-                <ul class="ms-3">
-                    <li>Prepares tax certificates, 300+ certificates per month, from a Title Industry point of view by
-                        utilizing the data needed from Appraisal District and Tax offices in counties across the state
-                        of Texas.</li>
-                    <li>Validated on tax certificates, 600+ certificates per month, to ensure accuracy and quality prior
-                        to being sent to the clients</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Freelance Translator</h5>
-                        <p class="text-muted mb-0"><strong>FE LANGS / NETMANIAS INC.</strong> – Seattle, WA</p>
-                    </div>
-                    <span class="badge bg-secondary">November 2019 – June 2024</span>
-                </div>
-                <ul class="ms-3">
-                    <li>Translated 200+ insurance documents, including confidential medical records, delivering quality
-                        documentation to improve communications between the insurance companies and insurers</li>
-                    <li>Validated on finalized documents to ensure accuracy and quality prior to release</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Director and Coordinator</h5>
-                        <p class="text-muted mb-0"><strong>DREAMING TREE LEARNING INC.</strong> – Woodway, TX</p>
-                    </div>
-                    <span class="badge bg-secondary">January 2011 – August 2014</span>
-                </div>
-                <ul class="ms-3">
-                    <li>Created and coordinated a 4-week-long English camp for Korean high school students, resulting in
-                        improved English proficiency and test scores</li>
-                    <li>Hired and supervised teachers and staff; planned curriculums and coordinated field trips;
-                        managed budgets</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Instructor (GTA) / Graduate Research Associate (GRA)</h5>
-                        <p class="text-muted mb-0"><strong>THE OHIO STATE UNIVERSITY</strong> – Columbus, OH</p>
-                    </div>
-                    <span class="badge bg-secondary">September 2007 – March 2010</span>
-                </div>
-                <ul class="ms-3">
-                    <li>Taught undergraduate core classes, with class sizes ranging from 16 to 40 students, managing
-                        full teaching responsibilities, including course design, lectures, and assessments</li>
-                    <li>Engaged with 230+ undergraduate students and providing guidance on academic and professional
-                        development, and writing reference letters to support their career goals</li>
-                    <li>Coordinated internship seminars for master's students, engaging 100+ graduate students</li>
-                    <li>Analyzed and evaluated the master's program to prepare documents for accreditation, resulting in
-                        successful renewal</li>
-                    <li>Contributed to the development and recruitment of the undergraduate program</li>
-                    <li>Conducted an enrollment analysis of the College of Engineering, focusing on female students'
-                        enrollment status and diverse groups, while assisting the Associate Dean</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
-                        <h5 class="fw-bold mb-1">Planning Technician and GIS Specialist (intern)</h5>
-                        <p class="text-muted mb-0"><strong>ACP-VISIONING & PLANNING, LTD.</strong> – Columbus, OH</p>
-                    </div>
-                    <span class="badge bg-secondary">December 2002 – December 2004</span>
-                </div>
-                <ul class="ms-3">
-                    <li>Managed databases and conducted analyses with demographic, statistical, and spatial data sets
-                        using Excel and ArcGIS</li>
-                    <li>Produced socio-economic statistical reports with maps, supporting the development and
-                        implementation of projects such as a comprehensive plan, strategic investment plan, and zoning
-                        regulations</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Skills Section -->
-    <div class="row mb-5">
-        <div class="col-lg-10 mx-auto">
-            <h2 class="fw-bold mb-4" style="color: var(--navy-primary);">Skills & Languages</h2>
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <h6 class="fw-bold mb-2">Languages:</h6>
-                    <p>English (Fluent) • Korean (Native)</p>
-                </div>
-                <div class="col-md-6">
-                    <h6 class="fw-bold mb-2">Software & Tools:</h6>
-                    <p>Python • SQL • Tableau • RStudio • SAS • Microsoft Office Suite • Visual Studio Code • ChatGPT,
-                        Gemini Pro, Claude</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Additional Section -->
-    <div class="row mb-5">
-        <div class="col-lg-10 mx-auto">
-            <h2 class="fw-bold mb-4" style="color: var(--navy-primary);">Awards & Publications</h2>
-
-            <div class="mb-3">
-                <h6 class="fw-bold mb-2">Awards:</h6>
-                <ul class="ms-3">
-                    <li>Patricia Burgess Award (for the best dissertation, thesis, and/or research), City and Regional
-                        Planning, Austin E. Knowlton School of Architecture, The Ohio State University, June 2010</li>
-                    <li>Jerrold R. Voss Award (for the best doctoral student research, $1,500 scholarship), June 2009
-                    </li>
-                    <li>Travel Award ($500 for travel expenses), Access to Destinations 2 Conference, The University of
-                        Minnesota, August 2007</li>
-                    <li>Travel Award ($500 offered for travel expenses), Access to Destinations Conference, The
-                        University of Minnesota, November 2004</li>
-                    <li>University Scholarship, Jeonbuk National University, 1992-1996</li>
-                </ul>
-            </div>
-
-            <div class="mb-3">
-                <h6 class="fw-bold mb-2">Refereed Publications:</h6>
-                <ul class="ms-3">
-                    <li>Kim, Moon J., and Morrow-Jones, Hazel A. (2011). Intrametropolitan Residential Mobility and
-                        Older Inner Suburbs: A Case Study of the Greater Columbus, Ohio Metropolitan Area. Housing
-                        Policy Debate. Vol. 21(1). 133-164.</li>
-                    <li>Kim, Moon J., and Morrow-Jones, Hazel A. (2005). Current Determinants of Residential Location
-                        Choices: An Empirical Study in the Greater Columbus Metropolitan Area. In D. M. Levinson, and
-                        Krizek, Kevin J. (Ed.), Access to Destinations (pp. 149-170): Elsevier.</li>
-                </ul>
-            </div>
-
-            <div class="mb-3">
-                <h6 class="fw-bold mb-2">Volunteering:</h6>
-                <p>Supportive Housing Program (SHP), Meyer Center, Mission Waco</p>
-            </div>
-
-            <div class="mb-3">
-                <h6 class="fw-bold mb-2">Professional Services:</h6>
-                <p>Ad hoc reviewer for Housing Policy for the Elderly, the Journal of the American Planning Association,
-                    and the Journal of Housing Policy Debate, 2011-2017</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Download Section -->
+<div class="container pb-5 mb-5">
     <div class="row">
-        <div class="col-lg-10 mx-auto text-center">
-            <div class="card bg-light border-0 shadow-sm">
-                <div class="card-body py-4">
-                    <p class="text-muted mb-3">Need the resume in PDF format?</p>
-                    <a href="{% static 'resume.pdf' %}" class="btn btn-primary btn-lg" download>
-                        <i class="fas fa-download me-2"></i> Download Resume (PDF)
+        <div class="col-lg-10 mx-auto">
+            <!-- Career Profile Section -->
+            <div class="mb-5">
+                <h2 class="section-title">Career Profile</h2>
+                <div class="card-modern border-gold-left">
+                    <p class="mb-0">
+                        Highly motivated MSIS candidate specialized in business analytics, with excellent analytical and interpretive skills and a strong foundation in problem-solving and independent research. Skilled in data analysis, with a strong work ethic, exceptional attention to detail, and excellent time management. Proven ability to work independently and/or in a team environment, as well as effective interpersonal skills.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-7">
+                    <!-- Education Section -->
+                    <div class="mb-5">
+                        <h2 class="section-title">Education</h2>
+                        <div class="timeline-item">
+                            <h5 class="fw-bold mb-1">Master of Science in Information Systems</h5>
+                            <p class="text-muted mb-0">Baylor University – Waco, Texas</p>
+                            <p class="small text-navy mb-2">Concentration in Business Analytics: GPA 4.0</p>
+                            <span class="badge-custom">DEC 2026</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="fw-bold mb-1">Master of City and Regional Planning</h5>
+                            <p class="text-muted mb-0">The Ohio State University – Columbus, Ohio</p>
+                            <p class="small text-navy mb-2">Thesis on Residential Location Decisions and Housing Quality</p>
+                            <span class="badge-custom">JUNE 2008</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="fw-bold mb-1">Bachelor of Engineering in Architecture</h5>
+                            <p class="text-muted mb-0">Jeonbuk National University – South Korea</p>
+                            <span class="badge-custom mt-2">FEB 1997</span>
+                        </div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="mb-5">
+                        <h2 class="section-title">Experience</h2>
+                        <div class="timeline-item">
+                            <h5 class="fw-bold mb-1">Tax Specialist</h5>
+                            <p class="text-muted mb-2">Total Tax Certificates – Waco, TX</p>
+                            <ul class="small text-navy">
+                                <li>Manages tax certification data with high precision for Title Industry clients.</li>
+                                <li>Validated 600+ certificates monthly to ensure accuracy and quality.</li>
+                            </ul>
+                            <span class="badge-custom mt-2">2025 - PRESENT</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="fw-bold mb-1">Freelance Translator</h5>
+                            <p class="text-muted mb-2">FE Langs / Netmanias Inc. – Seattle, WA</p>
+                            <span class="badge-custom">2019 - 2024</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="fw-bold mb-1">Director and Coordinator</h5>
+                            <p class="text-muted mb-2">Dreaming Tree Learning Inc. – Woodway, TX</p>
+                            <span class="badge-custom">2011 - 2014</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <!-- Skills Section -->
+                    <div class="mb-5">
+                        <h2 class="section-title">Skills</h2>
+                        <div class="card-modern mb-4">
+                            <h6 class="fw-bold mb-3">Languages</h6>
+                            <p class="small mb-0">English (Fluent) • Korean (Native)</p>
+                        </div>
+                        <div class="card-modern">
+                            <h6 class="fw-bold mb-3">Software & Tools</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge-custom">BI TOOLS</span>
+                                <span class="badge-custom">AI TOOLS</span>
+                                <span class="badge-custom">RStudio Code (R)</span>
+                                <span class="badge-custom">Tableau</span>
+                                <span class="badge-custom">VS Code (Python)</span>
+                                <span class="badge-custom">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="mt-5 text-center">
+                <div class="card-modern bg-light border-0">
+                    <p class="text-muted mb-4">Looking for a print-ready version?</p>
+                    {% if profile and profile.resume_file %}
+                    <a href="{{ profile.resume_file.url }}" class="btn btn-primary btn-lg px-5" download>
+                        DOWNLOAD PDF RESUME
                     </a>
+                    {% else %}
+                    <p class="text-navy fw-bold small">Resume file is currently being updated.</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<style>
-    .badge {
-        font-size: 0.85rem;
-        padding: 0.5rem 0.75rem;
-    }
-
-    .card {
-        transition: all 0.3s ease;
-    }
-
-    .card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    }
-</style>
 {% endblock %}

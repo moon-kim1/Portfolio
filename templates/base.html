@@ -1,16 +1,20 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Moon Jeong Kim | MSIS Portfolio{% endblock %}</title>
     <!-- Fonts: Playfair Display for Headings, Lato for Body -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
         <div class="container">
@@ -34,14 +38,15 @@
 
     <main>
         {% if messages %}
-            <div class="container mt-4">
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show shadow-sm border-0 border-start border-4 border-gold bg-white text-navy">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                {% endfor %}
+        <div class="container mt-4">
+            {% for message in messages %}
+            <div
+                class="alert alert-{{ message.tags }} alert-dismissible fade show shadow-sm border-0 border-start border-4 border-gold bg-white text-navy">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
+            {% endfor %}
+        </div>
         {% endif %}
 
         {% block content %}{% endblock %}
@@ -50,18 +55,15 @@
     <footer class="text-center">
         <div class="container py-5">
             <div class="footer-divider mb-4 mx-auto"></div>
-            <p class="mb-0 text-muted">&copy; 2026 MOON JEONG KIM. ALL RIGHTS RESERVED.</p>
+            <p class="mb-0">&copy; 2026 MOON JEONG KIM. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Chatbase Integration -->
-    <script
-      src="https://www.chatbase.co/embed.min.js"
-      chatbotId="IfqWUOB4YvDxid8zs1Bn5"
-      domain="www.chatbase.co"
-      defer>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="IfqWUOB4YvDxid8zs1Bn5" domain="www.chatbase.co" defer>
     </script>
 </body>
+
 </html>
