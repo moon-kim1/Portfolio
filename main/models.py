@@ -1,4 +1,5 @@
 import io
+import os
 import random
 from django.db import models
 from django.core.files.base import ContentFile
@@ -16,11 +17,11 @@ class Project(models.Model):
 
     def save(self, *args, **kwargs):
         # 1. Try to extract thumbnail from PowerPoint if no image is provided
-        if not self.image and self.presentation_file and self.is_ppt():
+        # Note: win32com only works on Windows. On Render (Linux), this will be skipped.
+        if not self.image and self.presentation_file and self.is_ppt() and os.name == 'nt':
             try:
                 import win32com.client
                 import pythoncom
-                import os
                 
                 # Initialize COM for the current thread
                 pythoncom.CoInitialize()
@@ -43,9 +44,6 @@ class Project(models.Model):
                     
                     # Cleanup temp file
                     presentation.Close()
-                    # Only quit if no other presentations are open? 
-                    # Usually better to just close the one we opened.
-                    # powerpoint.Quit() 
                 
                 if os.path.exists(temp_thumb):
                     os.remove(temp_thumb)
