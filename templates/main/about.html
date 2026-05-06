@@ -20,15 +20,18 @@
             <div class="profile-img-container">
                 <img src="{{ profile.profile_picture.url }}" alt="{{ profile.name }}" class="img-fluid rounded shadow-lg border-gold mb-2">
                 <p class="small text-muted fst-italic mt-1">
-                    * The portrait above was created by a talented friend — a small reminder of the remarkable people in my life.
+                    * The portrait above was created by a talented friend.
                 </p>
             </div>
         </div>
         <div class="col-lg-8">
+            <h2 class="section-title">{{ profile.name|default:"My Story" }}</h2>
+            <p class="lead text-gold fw-bold mb-4">{{ profile.bio_title }}</p>
         {% else %}
         <div class="col-lg-12">
+            <h2 class="section-title">{{ profile.name|default:"My Story" }}</h2>
+            {% if profile.bio_title %}<p class="lead text-gold fw-bold mb-4">{{ profile.bio_title }}</p>{% endif %}
         {% endif %}
-            <h2 class="section-title">My Story</h2>
             <div class="lead text-navy">
                 <p class="mb-4">
                     Outside of work, I find joy in the people and things that keep me grounded. Family and friends are
