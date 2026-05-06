@@ -77,12 +77,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
+# Use Render's persistent disk path if it exists, otherwise use local path
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    # Everything on the single allowed disk
+    PERSISTENT_DISK_PATH = '/opt/render/project/src/media'
+    MEDIA_ROOT = os.path.join(PERSISTENT_DISK_PATH, 'uploads')
+    DATABASE_PATH = os.path.join(PERSISTENT_DISK_PATH, 'db.sqlite3')
+else:
+    MEDIA_ROOT = BASE_DIR / 'media'
+    DATABASE_PATH = BASE_DIR / 'db.sqlite3'
+
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        default=f"sqlite:///{DATABASE_PATH}",
         conn_max_age=600
     )
 }
@@ -128,12 +139,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
-# Use Render's persistent disk path if it exists, otherwise use local path
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
-    MEDIA_ROOT = '/opt/render/project/src/media'
-else:
-    MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/6.0/ref/settings/#default-auto-field
