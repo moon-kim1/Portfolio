@@ -15,12 +15,12 @@
 <div class="container pb-5 mb-5">
     <div class="row g-5">
         <!-- Contact Information -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 d-flex flex-column">
             <h2 class="section-title">Contact Information</h2>
-            <div class="card-modern border-gold-left mb-4">
+            <div class="card-modern border-gold-left flex-grow-1 shadow-sm">
                 <div class="d-flex align-items-center mb-4">
-                    <div class="bg-light p-3 rounded-circle me-3">
-                        <i class="fas fa-envelope text-gold"></i>
+                    <div class="contact-icon-circle me-3">
+                        <i class="fas fa-envelope"></i>
                     </div>
                     <div>
                         <h6 class="fw-bold mb-0">Email</h6>
@@ -28,8 +28,8 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center mb-4">
-                    <div class="bg-light p-3 rounded-circle me-3">
-                        <i class="fab fa-linkedin-in text-gold"></i>
+                    <div class="contact-icon-circle me-3">
+                        <i class="fab fa-linkedin-in"></i>
                     </div>
                     <div>
                         <h6 class="fw-bold mb-0">LinkedIn</h6>
@@ -37,8 +37,8 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    <div class="bg-light p-3 rounded-circle me-3">
-                        <i class="fas fa-map-marker-alt text-gold"></i>
+                    <div class="contact-icon-circle me-3">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div>
                         <h6 class="fw-bold mb-0">Location</h6>
@@ -49,9 +49,9 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="col-lg-8">
+        <div class="col-lg-8 d-flex flex-column">
             <h2 class="section-title">Send a Message</h2>
-            <div class="card-modern shadow-lg">
+            <div class="card-modern flex-grow-1 shadow-sm">
                 <form method="POST">
                     {% csrf_token %}
                     <div class="row">
@@ -82,6 +82,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
+    .contact-icon-circle {
+        width: 45px;
+        height: 45px;
+        background-color: #f8f9fa;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
     .form-control {
         padding: 0.8rem 1.2rem;
         border: 1px solid #e0e6ed;
@@ -94,10 +107,6 @@
         border-color: var(--gold);
         box-shadow: 0 0 0 0.25rem rgba(201, 168, 76, 0.1);
         background-color: #fff;
-    }
-
-    .bg-light {
-        background-color: #f8f9fa !important;
     }
 </style>
 {% endblock %}
