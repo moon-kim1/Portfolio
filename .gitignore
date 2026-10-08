@@ -22,3 +22,5 @@ ENV/
 # OS files
 .DS_Store
 Thumbs.db
+datadump.json
+render_data.json
